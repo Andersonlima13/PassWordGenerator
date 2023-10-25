@@ -5,7 +5,11 @@ function generatePassword(length, useSpecialChars) {
       charset += '!@#$%^&*()_+';
     }
     const passwordArray = Array.from({ length }, () => charset[Math.floor(Math.random() * charset.length)]);
-    return passwordArray.join('');
-  }
+    if (length > 7) {
+    return passwordArray.join('')}
+    else{
+      window.alert("A senha Deve conter no mínimo 8 caracteres!")
+    }
+   }
   
   export { generatePassword };

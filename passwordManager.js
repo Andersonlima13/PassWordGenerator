@@ -2,7 +2,13 @@
 let savedPasswords = [];
 
 function savePassword(password) {
-  savedPasswords.push(password);
+  if (password == [""]){
+    window.alert("Gere Uma Senha Antes De Salvar!")  
+  }else{
+    savedPasswords.push(password)
+  }
+  
+  
 }
 
 function getSavedPasswords() {
